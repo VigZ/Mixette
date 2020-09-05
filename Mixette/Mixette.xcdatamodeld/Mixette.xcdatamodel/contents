@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Mixtape" representedClassName="Mixtape" syncable="YES" codeGenerationType="class">
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="tracks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Track" inverseName="mixtapes" inverseEntity="Track"/>
+    </entity>
+    <entity name="Track" representedClassName="Track" syncable="YES" codeGenerationType="class">
+        <attribute name="artist" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="mixtapes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Mixtape" inverseName="tracks" inverseEntity="Mixtape"/>
+    </entity>
+    <elements>
+        <element name="Track" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Mixtape" positionX="110.65234375" positionY="-10.89453125" width="128" height="73"/>
+    </elements>
 </model>
