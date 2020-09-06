@@ -79,7 +79,7 @@ class HomeCollectionViewController: UICollectionViewController {
                                 didSelectItemAt indexPath: IndexPath){
         
         let vc = storyboard?.instantiateViewController(withIdentifier: "DetailTable") as! DetailTableViewController
-        vc.mixtape = mixes[indexPath.item] as Mixtape
+        vc.mixtape = mixes[indexPath.item] as! Mixtape
         navigationController?.pushViewController(vc, animated: true)
     
     }

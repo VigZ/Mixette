@@ -26,27 +26,30 @@ class DetailTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let tracksCount = mixtape?.tracks?.count{
+
+        if let tracksCount = mixtape?.tracks?.count {
+            
             return tracksCount
         }
         return 0
         
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DetailRow", for: indexPath)
+        
+        let track = mixtape?.tracks?.allObjects[indexPath.row] as! Track
+
+        cell.textLabel?.text = track.title
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
