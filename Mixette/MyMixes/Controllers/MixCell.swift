@@ -10,4 +10,5 @@ import UIKit
 
 class MixCell: UICollectionViewCell {
     
+    @IBOutlet weak var titleLabel: UILabel!
 }

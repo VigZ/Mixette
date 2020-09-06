@@ -12,11 +12,11 @@ import CoreData
 
 class HomeCollectionViewController: UICollectionViewController {
     
-    var mixes = [NSManagedObject] = []
+    var mixes = [NSManagedObject]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        saveMix(title:"TestMix")
 
     }
 
@@ -43,10 +43,10 @@ class HomeCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MixCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MixCell", for: indexPath) as! MixCell
     
-        let mix = mixes[indexPath.row] 
-        cell.textLabel?.text =
+        let mix = mixes[indexPath.row]
+        cell.titleLabel.text =
           mix.value(forKeyPath: "title") as? String
         
         return cell
