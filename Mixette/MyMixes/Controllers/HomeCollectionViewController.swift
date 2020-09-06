@@ -16,8 +16,6 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        saveMix(title:"TestMix")
-
     }
 
     /*
@@ -33,8 +31,7 @@ class HomeCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
@@ -121,13 +118,13 @@ class HomeCollectionViewController: UICollectionViewController {
         appDelegate.persistentContainer.viewContext
       
       let entity =
-        NSEntityDescription.entity(forEntityName: "Mix",
+        NSEntityDescription.entity(forEntityName: "Mixtape",
                                    in: managedContext)!
       
       let mix = NSManagedObject(entity: entity,
                                    insertInto: managedContext)
       
-      mix.setValue(mix, forKeyPath: "title")
+      mix.setValue(title, forKeyPath: "title")
       
       do {
         try managedContext.save()
