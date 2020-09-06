@@ -74,6 +74,15 @@ class HomeCollectionViewController: UICollectionViewController {
            print("Could not fetch. \(error), \(error.userInfo)")
          }
     }
+    
+   override func collectionView(_ collectionView: UICollectionView,
+                                didSelectItemAt indexPath: IndexPath){
+        
+        let vc = storyboard?.instantiateViewController(withIdentifier: "DetailTable") as! DetailTableViewController
+        vc.mixtape = mixes[indexPath.item] as Mixtape
+        navigationController?.pushViewController(vc, animated: true)
+    
+    }
 
 
     // MARK: UICollectionViewDelegate
