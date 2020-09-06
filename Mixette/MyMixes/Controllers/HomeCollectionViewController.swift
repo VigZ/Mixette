@@ -7,21 +7,17 @@
 //
 
 import UIKit
+import CoreData
 
-private let reuseIdentifier = "Cell"
 
 class HomeCollectionViewController: UICollectionViewController {
+    
+    var mixes = [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
     }
 
     /*
@@ -43,17 +39,45 @@ class HomeCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        return mixes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MixCell", for: indexPath)
     
-        // Configure the cell
-    
+        let mix = mixes[indexPath.row] 
+        cell.textLabel?.text =
+          mix.value(forKeyPath: "title") as? String
+        
         return cell
+    
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+      fetchMixes()
+     
+    }
+    
+    func fetchMixes(){
+         guard let appDelegate =
+           UIApplication.shared.delegate as? AppDelegate else {
+             return
+         }
+         
+         let managedContext =
+           appDelegate.persistentContainer.viewContext
+         
+         let fetchRequest =
+           NSFetchRequest<NSManagedObject>(entityName: "Mixtape")
+         
+         do {
+           mixes = try managedContext.fetch(fetchRequest)
+         } catch let error as NSError {
+           print("Could not fetch. \(error), \(error.userInfo)")
+         }
+    }
+
 
     // MARK: UICollectionViewDelegate
 
@@ -85,5 +109,32 @@ class HomeCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    func saveMix(title: String) {
+      
+      guard let appDelegate =
+        UIApplication.shared.delegate as? AppDelegate else {
+        return
+      }
+      
+      let managedContext =
+        appDelegate.persistentContainer.viewContext
+      
+      let entity =
+        NSEntityDescription.entity(forEntityName: "Mix",
+                                   in: managedContext)!
+      
+      let mix = NSManagedObject(entity: entity,
+                                   insertInto: managedContext)
+      
+      mix.setValue(mix, forKeyPath: "title")
+      
+      do {
+        try managedContext.save()
+        mixes.append(mix)
+      } catch let error as NSError {
+        print("Could not save. \(error), \(error.userInfo)")
+      }
+    }
 
 }
