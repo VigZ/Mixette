@@ -1,0 +1,4 @@
+framework module YoutubeDirectLinkExtractor {
+  header "YoutubeDirectLinkExtractor-Swift.h"
+  requires objc
+}

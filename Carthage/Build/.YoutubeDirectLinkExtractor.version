@@ -1,0 +1,11 @@
+{
+  "commitish" : "0.3.1",
+  "iOS" : [
+    {
+      "hash" : "7013ad0baf27b6ed7f1768192b65e67ae1957201a604ca284f67467bccbfa158",
+      "name" : "YoutubeDirectLinkExtractor",
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.2.4 (swiftlang-1103.0.32.9 clang-1103.0.32.53)"
+    }
+  ]
+}
