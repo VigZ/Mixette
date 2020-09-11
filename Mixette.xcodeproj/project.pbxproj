@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		801C1E54250C17B20016B89A /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 801C1E53250C17B20016B89A /* Cartfile */; };
 		808ED8272504354800A3FBB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED8262504354800A3FBB0 /* AppDelegate.swift */; };
 		808ED8292504354800A3FBB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED8282504354800A3FBB0 /* SceneDelegate.swift */; };
 		808ED82E2504354800A3FBB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808ED82C2504354800A3FBB0 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		801C1E53250C17B20016B89A /* Cartfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		808ED8232504354800A3FBB0 /* Mixette.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixette.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		808ED8262504354800A3FBB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		808ED8282504354800A3FBB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				808ED8342504354E00A3FBB0 /* LaunchScreen.storyboard */,
 				808ED8372504354E00A3FBB0 /* Info.plist */,
 				808ED82F2504354800A3FBB0 /* Mixette.xcdatamodeld */,
+				801C1E53250C17B20016B89A /* Cartfile */,
 			);
 			path = Mixette;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				808ED8362504354E00A3FBB0 /* LaunchScreen.storyboard in Resources */,
 				808ED8332504354E00A3FBB0 /* Assets.xcassets in Resources */,
+				801C1E54250C17B20016B89A /* Cartfile in Resources */,
 				808ED82E2504354800A3FBB0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

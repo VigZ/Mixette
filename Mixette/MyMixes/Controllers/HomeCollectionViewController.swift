@@ -16,6 +16,7 @@ class HomeCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     /*
@@ -44,7 +45,7 @@ class HomeCollectionViewController: UICollectionViewController {
     
         let mix = mixes[indexPath.row]
         cell.titleLabel.text =
-          mix.value(forKeyPath: "title") as? String
+        mix.value(forKeyPath: "title") as? String
         
         return cell
     
@@ -83,7 +84,7 @@ class HomeCollectionViewController: UICollectionViewController {
         navigationController?.pushViewController(vc, animated: true)
     
     }
-
+    
 
     // MARK: UICollectionViewDelegate
 
