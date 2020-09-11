@@ -16,6 +16,7 @@
 		808ED83E2504493300A3FBB0 /* HomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED83D2504493300A3FBB0 /* HomeCollectionViewController.swift */; };
 		808ED84C250487D600A3FBB0 /* MixCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED84B250487D600A3FBB0 /* MixCell.swift */; };
 		808ED84E2505568800A3FBB0 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED84D2505568800A3FBB0 /* DetailTableViewController.swift */; };
+		808ED85025057ADD00A3FBB0 /* NowPlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808ED84F25057ADD00A3FBB0 /* NowPlayingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		808ED83D2504493300A3FBB0 /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
 		808ED84B250487D600A3FBB0 /* MixCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixCell.swift; sourceTree = "<group>"; };
 		808ED84D2505568800A3FBB0 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
+		808ED84F25057ADD00A3FBB0 /* NowPlayingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 		808ED8482504524000A3FBB0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				808ED84F25057ADD00A3FBB0 /* NowPlayingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				808ED84E2505568800A3FBB0 /* DetailTableViewController.swift in Sources */,
 				808ED8312504354800A3FBB0 /* Mixette.xcdatamodeld in Sources */,
 				808ED8272504354800A3FBB0 /* AppDelegate.swift in Sources */,
+				808ED85025057ADD00A3FBB0 /* NowPlayingViewController.swift in Sources */,
 				808ED83E2504493300A3FBB0 /* HomeCollectionViewController.swift in Sources */,
 				808ED8292504354800A3FBB0 /* SceneDelegate.swift in Sources */,
 				808ED84C250487D600A3FBB0 /* MixCell.swift in Sources */,
